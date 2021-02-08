@@ -1,2 +1,10 @@
 # Ignores files of .class
 *.class
+
+.gradle/
+gradle/
+gradlew
+gradlew.bat
+
+proguard6.2.2/
+proguard-proguard6.2.2/

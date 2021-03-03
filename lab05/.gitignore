@@ -1,0 +1,9 @@
+# Ignores files of .class
+*.class
+
+.gradle/
+gradle/
+gradlew
+gradlew.bat
+
+*.bin

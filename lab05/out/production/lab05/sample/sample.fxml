@@ -1,0 +1,39 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.*?>
+
+<VBox fx:controller="sample.Controller"
+            xmlns:fx="http://javafx.com/fxml">
+    <TableView fx:id="tabView" >
+        <columns>
+            <TableColumn text="SID">
+                <cellValueFactory><PropertyValueFactory property="studentID" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Assignments">
+                <cellValueFactory><PropertyValueFactory property="assignments" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Midterm">
+                <cellValueFactory><PropertyValueFactory property="midterm" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Final Exam">
+                <cellValueFactory><PropertyValueFactory property="exam" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Final Grade">
+                <cellValueFactory><PropertyValueFactory property="finalGrade" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text="Letter Grade">
+                <cellValueFactory><PropertyValueFactory property="letterGrade" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+</VBox>

@@ -1,0 +1,9 @@
+/**
+ * file: colored-chart.css
+ *   Place in same directory as DynamicallyColoredBarChartWithLabel.java
+ *   Ensure that the build system copies this file to the build output directory.
+ */
+
+.default-color0.chart-bar { -fx-bar-fill: red; }
+.default-color1.chart-bar { -fx-bar-fill: blue; }
+

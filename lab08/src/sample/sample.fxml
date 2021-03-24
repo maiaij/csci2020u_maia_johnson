@@ -1,0 +1,75 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Button?>
+<VBox fx:controller="sample.Controller" xmlns:fx="http://javafx.com/fxml">
+    <MenuBar fx:id = "menuBar" GridPane.columnIndex = "0" GridPane.rowIndex = "0">
+        <Menu fx:id = "mainMenu" text="File">
+            <MenuItem text = "New" fx:id = "newBtn" onAction = "#clearTable"/>
+            <MenuItem text = "Open" fx:id = "openBtn" onAction = "#open"/>
+            <MenuItem text = "Save" fx:id = "saveBtn" onAction = "#save"/>
+            <MenuItem text = "Save As" fx:id = "saveAsBtn" onAction ="#saveAs"/>
+            <MenuItem text = "Exit" fx:id ="exitBtn" onAction ="#exit"/>
+        </Menu>
+    </MenuBar>
+
+    <TableView fx:id = "tabView"  GridPane.columnIndex = "0" GridPane.rowIndex = "1">
+        <columns>
+            <TableColumn text="SID">
+                <cellValueFactory>
+                    <PropertyValueFactory property = "studentID" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text = "Assignments" >
+                <cellValueFactory>
+                    <PropertyValueFactory property = "assignments" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text = "Midterm">
+                <cellValueFactory>
+                    <PropertyValueFactory property = "midterm" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text = "Final Exam">
+                <cellValueFactory>
+                    <PropertyValueFactory property = "exam" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text = "Final Grade">
+                <cellValueFactory>
+                    <PropertyValueFactory property = "finalGrade" />
+                </cellValueFactory>
+            </TableColumn>
+            <TableColumn text = "Letter Grade">
+                <cellValueFactory>
+                    <PropertyValueFactory property = "letterGrade" />
+                </cellValueFactory>
+            </TableColumn>
+        </columns>
+    </TableView>
+
+    <GridPane fx:id = "inputs" GridPane.rowIndex = "2" GridPane.columnIndex = "1" hgap = "10" vgap = "10">
+        <Label text = "SID" GridPane.columnIndex = "1" GridPane.rowIndex = "1"/>
+        <Label text = "Assignments" GridPane.columnIndex = "8" GridPane.rowIndex = "1"/>
+        <Label text = "Midterm" GridPane.columnIndex = "1" GridPane.rowIndex = "2"/>
+        <Label text = "Exam" GridPane.columnIndex = "8" GridPane.rowIndex = "2"/>
+
+        <TextField fx:id = "studentIDTF" GridPane.columnIndex = "2" GridPane.rowIndex = "1" minWidth = "100"/>
+        <TextField fx:id = "assignmentsTF" GridPane.columnIndex = "9" GridPane.rowIndex = "1" minWidth = "100"/>
+        <TextField fx:id = "midtermTF" GridPane.columnIndex = "2" GridPane.rowIndex = "2" minWidth = "100"/>
+        <TextField fx:id = "examTF" GridPane.columnIndex = "9" GridPane.rowIndex = "2" minWidth = "100"/>
+
+        <Button fx:id = "addBtn" text = "Add" GridPane.columnIndex = "1" GridPane.rowIndex = "3" onAction = "#addData"/>
+    </GridPane>
+</VBox>
+
